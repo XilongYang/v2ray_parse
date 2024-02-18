@@ -1,0 +1,27 @@
+{
+  "inbounds": [{
+    "port": 7891,
+    "protocol": "http",
+    "sniffing": {
+      "enabled": true,
+      "destOverride": ["http", "tls"]
+    },
+    "settings": {
+      "auth": "noauth"
+    }
+  }],
+  "outbounds": [{
+    "protocol": "vmess",
+    "settings": {
+      "vnext": [{
+        "users": [{
+          "id": "$id",
+          "security": "auto",
+          "alterId": $aid
+	}],
+        "address": "$addr",
+        "port": $port
+      }]
+    }
+  }]
+}
