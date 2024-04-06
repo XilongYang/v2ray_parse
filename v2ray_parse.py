@@ -2,6 +2,8 @@
 
 import json,base64,os
 
+os.chdir("/home/xilong/.config/v2ray")
+
 raw_file = open("raw", "r")
 raw_data = raw_file.read()
 
